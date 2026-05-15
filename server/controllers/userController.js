@@ -6,7 +6,7 @@ const registeruser = async (req, res) => {
         const { name, email, password } = req.body
 
         if (!name || !email || !password) {
-            return res.staus(400).json({
+            return res.status(400).json({
                 message: "please provide all fields"
             })
         }
@@ -51,7 +51,7 @@ const loginUser = async (req, res) => {
                 message: "invaiid credentails"
             })
         }
-        const token = jwt.sign({ id: user._id }, process.env.JWT_TOKEN, { expiresIn: "1d" })
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" })
         res.status(200).json({
             message: "login successfully",
             token: token
