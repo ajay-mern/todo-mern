@@ -1,3 +1,3 @@
 // export const BASE_URL = "http://localhost:8080/api"
-export const BASE_URL = "https://todo-mern-w0n4.onrender.com"
+export const BASE_URL = "https://todo-mern-w0n4.onrender.com/api"
 
