@@ -13,7 +13,7 @@ connectDB()
 app.get("/", (req, res) => {
     res.send("todo app is running success fully")
 })
-app.use(cors({ origin: "http://localhost:5173" }))
+app.use(cors({ origin: ["http://localhost:5173", "https://todo-mern-w0n4.onrender.com"], credentials: true }))
 app.use(express.json())
 app.use("/api/todos", todoRoutes)
 app.use("/api/users", userRoutes)

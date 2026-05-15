@@ -59,7 +59,7 @@ export const Todos = () => {
     }
     return (
         <div className="todo-container">
-            <h2 style={{ margin: "auto" }}>welcome back </h2>
+
             <h2 className="todo-title">My Todos</h2>
             <div className="todo-input">
                 <input type="text" placeholder="enter todo" value={title} onChange={(e) => setTitle(e.target.value)} style={{ padding: "8px", marginRight: "10px" }} />
