@@ -93,6 +93,13 @@ export const Todos = () => {
                                     >
                                         Edit
                                     </button>
+                                    <button className="edit-btn" onClick={() => {
+                                        setTodos(prev =>
+                                            prev.map(t =>
+                                                t._id === todo._id ? { ...t, completed: !t.completed } : t
+                                            )
+                                        )
+                                    }}>{todo.completed ? "Not Completed" : "Done"}</button>
                                 </div>
                             </>
                         )}
